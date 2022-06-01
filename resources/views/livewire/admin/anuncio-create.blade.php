@@ -37,7 +37,7 @@
                             <div class="row align-items-center">
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <a type="button" class="float-left btn btn-dark">Registros</a>
+                                        <a href="" type="button" class="float-left btn btn-dark">Registros</a>
                                         <button wire:loading.attr="disabled" wire:target="url_img"
                                             class="float-right btn btn-success"><i class="fa fa-save"></i>
                                             Publicar</button>

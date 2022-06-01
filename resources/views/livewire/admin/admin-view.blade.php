@@ -19,8 +19,8 @@
                                     <div class="container">
                                         <p>{{ $anuncio->contenido }}</p>
 
-                                        <img src="{{ Storage::disk('public')->url($anuncio->url_img) }}"
-                                            style="width: 200px; height: 150px;"><br>
+                                        {{-- <img src="{{ Storage::disk('public')->url($anuncio->url_img) }}"
+                                            style="width: 200px; height: 150px;"><br> --}}
 
                                         {{-- <img src="{{ asset($anuncio->url_img) }}"
                                             style="width: 200px; height: 150px;"><br> --}}
@@ -33,7 +33,8 @@
                                     <footer class="blockquote-footer">
                                         <a href="{{ route('admin.anuncio-edit', $anuncio) }}"><small
                                                 class="text-muted">Editar</a></small>
-                                        <a onclick="desactivar()" ><small class="text-muted">Desactivar</a></small>
+                                        <a href="{{ route('admin.anuncio-delete', $anuncio) }}"><small
+                                                class="text-muted">Desactivar</a></small>
                                         <small class="float-right text-muted muted"><b>Creado el dia
                                                 {{ $anuncio->created_at }}</b></a></small>
                                     </footer>

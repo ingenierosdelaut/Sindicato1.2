@@ -25,6 +25,14 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
+            <div class="col-6">
+                <select wire:model="usuario.estado" type="button" class="form-control" name="estado"
+                    placeholder="Elegir">
+                    <i class="fa fa-user-alt-slash"></i>
+                    <option value="1">Activo</option>
+                    <option value="0">Inactivo</option>
+                </select>
+            </div>
         </div> <br>
 
         <div class="row">
@@ -46,8 +54,6 @@
 
         <div class="row">
             <div class="col-6">
-                {{-- <input wire:model="usuario.departamento" type="text" placeholder="Departamento"
-                    class="form-control"> --}}
                 <select wire:model="usuario.departamento" type="button" class="form-control" name="departamento">
                     <option>Departamento</option>
                     <option value="tecnologias de la infomacion">Tecnologias de la infomación</option>
@@ -61,10 +67,7 @@
             </div>
 
             <div class="col-6">
-                {{-- <input wire:model="usuario.puesto" type="text" placeholder="Puesto"
-                    class="form-control"> --}}
-                <select wire:model="usuario.puesto" type="button" class="form-control" name="puesto"
-                    aria-placeholder="Elegir">
+                <select wire:model="usuario.puesto" type="button" class="form-control" name="puesto" aria-placeholder="Elegir">
                     <option>Puesto</option>
                     <option value="administrativo">Administrativo</option>
                     <option value="docente">Docente</option>
@@ -83,6 +86,7 @@
             </div>
         </div> <br>
 
+
         <div class="row">
             <div class="col-4">
                 <input wire:model="usuario.telefono" type="text" class="form-control"
@@ -92,7 +96,7 @@
                 @enderror
             </div>
             <div class="col-4">
-                <input wire:model="usuario.curp" type="text" class="form-control" style="text-transform:uppercase;"
+                <input wire:model="usuario.curp" type="text" class="form-control"
                     placeholder=" CURP, Ejemplo: MAAA991217HSRRML06">
                 @error('usuario.curp')
                     <span class="text-danger">{{ $message }}</span>
@@ -100,7 +104,7 @@
             </div>
 
             <div class="col-4">
-                <input wire:model="usuario.rfc" type="text" class="form-control" style="text-transform:uppercase;"
+                <input wire:model="usuario.rfc" type="text" class="form-control"
                     placeholder="RFC, Ejemplo: MAAA991217HSRRML06">
                 @error('usuario.rfc')
                     <span class="text-danger">{{ $message }}</span>

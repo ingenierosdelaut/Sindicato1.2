@@ -1,14 +1,19 @@
 <div>
     <form wire:submit.prevent="crear">
         <div class="container cont-user">
-            <div class="card-header">
-                <h2>Formulario de registro de usuarios</h2>
-            </div>
-            @include('livewire.admin.formulario')
-            <br>
-            <div class="card-footer">
-                <div class="d-grid gap-2 col-6 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Formulario de registro</h2>
+                    <p>Para registrar un nuevo usuario se deben llenar todos los campos que se muestran debajo.</p>
+                </div>
+                <div class="card-body">
+                    @include('livewire.admin.formulario')
+                </div>
+                <br>
+                <div class="card-footer">
                     <button class="float-right btn btn-success"><i class="fa fa-save"></i> Guardar</button>
+                    <a href="{{ route('admin.usuarios') }}" class="btn btn-secondary"><i class="fa fa-home"></i>
+                        Regresar</a>
                 </div>
             </div>
 

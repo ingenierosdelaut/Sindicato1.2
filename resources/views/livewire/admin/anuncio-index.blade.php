@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col mb-1">
                 <div class="float-left">
-                    <a type="button" class="btn-sm btn-dark"><i class="fa fa-file-pdf"></i> Generar reporte</a>
+                    <a href="" type="button" class="btn-sm btn-dark"><i class="fa fa-file-pdf"></i> Generar reporte</a>
                 </div>
             </div>
             <div class="col mb-1">
@@ -37,7 +37,7 @@
                                     <td>{{ $anuncio->contenido }}</td>
                                     <td><span class="badge badge-pill badge-success">Activo</span></td>
                                     <td>
-                                        <a href="" type="button" title="Eliminar anuncio" class="btn-sm btn-danger"><i
+                                        <a href="{{route('admin.anuncio-delete', $anuncio)}}" type="button" title="Eliminar anuncio" class="btn-sm btn-danger"><i
                                                 class="fa fa-trash"></i></a>
                                         <a href="{{ route('admin.anuncio-edit', $anuncio) }}" title="Editar anuncio"
                                             type="button" class="btn-sm btn-info"><i class="fa fa-edit"></i></a>

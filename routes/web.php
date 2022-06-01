@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Admin\AdminView;
 use App\Http\Livewire\Admin\AnuncioCreate;
+use App\Http\Livewire\Admin\AnuncioDelete;
 use App\Http\Livewire\Admin\AnuncioEdit;
 use App\Http\Livewire\Admin\AnuncioIndex;
 use App\Http\Livewire\Admin\Solicitud;
@@ -55,6 +56,7 @@ Route::get('/admin/usuarios/pdf', [UsuarioIndex::class, 'generarPDF'])->name('ad
 Route::get('/admin/anuncios', AnuncioIndex::class)->name('admin.anuncios');
 Route::get('/admin/anuncios/crear-anuncio', AnuncioCreate::class)->name('admin.anuncio-create');
 Route::get('/admin/anuncios/{anuncio}/editar-anuncio', AnuncioEdit::class)->name('admin.anuncio-edit');
+Route::get('/admin/anuncio/{anuncio}/eliminar', AnuncioDelete::class)->name('admin.anuncio-delete');
 
 
 //Admin Solicitudes

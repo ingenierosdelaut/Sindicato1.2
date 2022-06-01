@@ -9,6 +9,9 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Usuario extends Model
 {
-    use HasApiTokens,HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
+    protected $hidden = [
+        'password'
+    ];
 }

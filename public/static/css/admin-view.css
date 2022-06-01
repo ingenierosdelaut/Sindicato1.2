@@ -1,7 +1,7 @@
 .contenedor {
-    margin-top: 40px;
     overflow: auto;
     max-height: 650px;
+    text-decoration: none;
 
 }
 
@@ -12,14 +12,8 @@
 }
 
 .jumbotron {
-    right: 90px;
-    margin-top: -15px;
+    width: 100%;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5), 0 5px 5px 0 rgba(0, 0, 0, 0.20);
-}
-
-.carta {
-    text-align: center;
-    right: 50px;
 }
 
 .col-6 {
@@ -28,7 +22,6 @@
 
 .cnt-footer {
     position: absolute;
-    right: 50px;
 }
 
 /* .textinput {
@@ -51,6 +44,5 @@ a:hover {
 
 .grid {
     position: relative;
-    left: 99px;
-    top: -75px;
+
 }
