@@ -19,6 +19,7 @@ class CreateUsuariosTable extends Migration
             $table->string('apellido');
             $table->string('email')->unique();
             $table->boolean('estado');
+            $table->boolean('is_admin')->default(0)->nulleable();
             $table->string('password')->default('');
             $table->string('telefono');
             $table->string('puesto');

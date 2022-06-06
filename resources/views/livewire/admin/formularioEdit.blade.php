@@ -56,10 +56,10 @@
             <div class="col-6">
                 <select wire:model="usuario.departamento" type="button" class="form-control" name="departamento">
                     <option>Departamento</option>
-                    <option value="tecnologias de la infomacion">Tecnologias de la infomación</option>
-                    <option value="operaciones comerciales">Operaciones comerciales internacionales</option>
-                    <option value="mecatronica">Mecatrónica</option>
-                    <option value="desarrollo de negocios">Desarrollo de negocios</option>
+                    <option value="Tecnologias de la información">Tecnologias de la infomación</option>
+                    <option value="Operaciones comerciales">Operaciones comerciales internacionales</option>
+                    <option value="Mecatrónica">Mecatrónica</option>
+                    <option value="Desarrollo de negocios">Desarrollo de negocios</option>
                 </select>
                 @error('usuario.departamento')
                     <span class="text-danger">{{ $message }}</span>
@@ -69,8 +69,8 @@
             <div class="col-6">
                 <select wire:model="usuario.puesto" type="button" class="form-control" name="puesto" aria-placeholder="Elegir">
                     <option>Puesto</option>
-                    <option value="administrativo">Administrativo</option>
-                    <option value="docente">Docente</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Docente">Docente</option>
                 </select>
                 @error('usuario.puesto')
                     <span class="text-danger">{{ $message }}</span>

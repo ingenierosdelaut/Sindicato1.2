@@ -39,12 +39,6 @@ class UsuarioIndex extends Component
         $this->cargado = true;
     }
 
-    public function desactivarUsuario()
-    {
-        $this->validate();
-        $this->usuario->estado = 0;
-        $this->usuario->save();
-    }
 
     public function updatingSearch()
     {

@@ -1,53 +1,56 @@
 <div>
-    <form wire:submit.prevent="crearAnuncio">
-        <div class="container cont-anuncio">
-            <div class="row">
-                <div class="col">
-                    <div class="card carta w-50">
-                        <div class="card-footer">
-                            <div class="form-group"><br>
-                                <input wire:model="anuncio.titulo" class="form-control" id="comment"
-                                    placeholder="Titulo del anuncio" name="text">
-                                @error('anuncio.titulo')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                                <br>
-                                <textarea wire:model="anuncio.contenido" placeholder="Especificaciones del anuncio"></textarea> <br>
-                                @error('anuncio.contenido')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div><br>
+    <head>
+        <link rel="stylesheet" href="{{ asset('static/css/style.css') }}">
+    </head>
 
-                            <div class="row">
-                                <div class="col-sm">
-                                    <label for="">Subir imagen</label>
-                                    <input wire:model="url_img" type="file" class="form-control-img" name="file"><i
-                                        class="fa-file-image-o"></i>
-                                    @error('url_img')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                    @if ($url_img != null)
-                                        <img class="border-radius: 25px; mx-auto d-block "
-                                            style="border-radius: 25px; width: 290px; height: 250px;"
-                                            src="{{ $url_img->temporaryUrl() }}" alt="">
-                                    @endif
-                                </div>
-                            </div><br>
-
-                            <div class="row align-items-center">
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <a href="" type="button" class="float-left btn btn-dark">Registros</a>
-                                        <button wire:loading.attr="disabled" wire:target="url_img"
-                                            class="float-right btn btn-success"><i class="fa fa-save"></i>
-                                            Publicar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu"></div>
+            <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+                <div class="user-logo">
+                    <img src="{{ asset('static/images/sututslrc.png') }}" width="150" height="150" alt="">
+                    <h3>SUTUTSLRC</h3>
                 </div>
             </div>
-        </div>
-    </form>
+            <ul class="list-unstyled components mb-5">
+                <li>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        <input wire:model="search" type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="{{ route('admin.view') }}"><span class="fa fa-home mr-3"></span> Home</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.usuarios') }}"><span class="fa fa-users mr-3 notif"></span>Usuarios</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.anuncios') }}"><span class="fa fa-newspaper mr-3"></span> Anuncios</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.solicitudes') }}"><span class="fa fa-tags mr-3"></span> Solicitudes</a>
+                </li>
+                <li>
+                    @livewire('iniciar-sesion.logout')
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <form wire:submit.prevent="crearAnuncio">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Para crear un nuevo anuncio solo hay que llenar los siguientes campos.</h5>
+                        <p>En caso de no querer subir una imagen simplemente se llenan los campos y se da clic en publicar.</p>
+                    </div>
+                    <div class="card-body">
+                        @include("livewire.admin.formulario-anuncio")
+                    </div>
+                </div>
+            </form>
+    </div>
+
 </div>

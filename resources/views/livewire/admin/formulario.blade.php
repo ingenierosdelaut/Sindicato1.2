@@ -50,10 +50,10 @@
                     class="form-control"> --}}
                 <select wire:model="usuario.departamento" type="button" class="form-control" name="departamento">
                     <option>Departamento</option>
-                    <option value="tecnologias de la infomacion">Tecnologias de la infomación</option>
-                    <option value="operaciones comerciales">Operaciones comerciales internacionales</option>
-                    <option value="mecatronica">Mecatrónica</option>
-                    <option value="desarrollo de negocios">Desarrollo de negocios</option>
+                    <option value="Tecnologias de la Información">Tecnologias de la infomación</option>
+                    <option value="Operaciones Comerciales">Operaciones comerciales internacionales</option>
+                    <option value="Mecatrónica">Mecatrónica</option>
+                    <option value="Desarrollo de negocios">Desarrollo de negocios</option>
                 </select>
                 @error('usuario.departamento')
                     <span class="text-danger">{{ $message }}</span>
@@ -66,8 +66,8 @@
                 <select wire:model="usuario.puesto" type="button" class="form-control" name="puesto"
                     aria-placeholder="Elegir">
                     <option>Puesto</option>
-                    <option value="administrativo">Administrativo</option>
-                    <option value="docente">Docente</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Docente">Docente</option>
                 </select>
                 @error('usuario.puesto')
                     <span class="text-danger">{{ $message }}</span>
@@ -86,7 +86,7 @@
         <div class="row">
             <div class="col-4">
                 <input wire:model="usuario.telefono" type="text" class="form-control"
-                    placeholder="Telefono, Ejemplo: 6531506589">
+                    placeholder="Teléfono, Ejemplo: 6531506589">
                 @error('usuario.telefono')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -110,7 +110,7 @@
 
         <div class="row">
             <div class="col-4">
-                <input wire:model="usuario.ine" type="text" class="form-control" placeholder="INE(Codigo)">
+                <input wire:model="usuario.ine" type="text" class="form-control" placeholder="INE(Código)">
                 @error('usuario.ine')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
@@ -126,7 +126,7 @@
 
             <div class="col-4">
                 <input wire:model="usuario.fecha_afiliacion" type="date" class="form-control"
-                    placeholder=" Fecha de Afiliacion Ejemplo: 20/05/2020">
+                    placeholder=" Fecha de Afiliación, Ejemplo: 20/05/2020">
                 @error('usuario.fecha_afiliacion')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror

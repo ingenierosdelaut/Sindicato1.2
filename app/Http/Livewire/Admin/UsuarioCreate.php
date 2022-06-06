@@ -17,8 +17,7 @@ class UsuarioCreate extends Component
     }
 
     use WithFileUploads;
-    public Usuario $usuarios;
-    public $archivo;
+    public Usuario $usuario;
     public $password;
     public $confirm_password;
     public $estado;
@@ -29,7 +28,7 @@ class UsuarioCreate extends Component
     }
 
 
-    public function crear()
+    public function crearUser()
     {
         $this->validate();
         $this->usuario->password = Hash::make($this->usuario->password);
